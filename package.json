@@ -2,8 +2,13 @@
   "name": "rowing-age",
   "version": "1.0.0",
   "description": "Utilities for calculating age-based rowing data",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/lobsterkatie/rowing-age.git",
   "author": "Katie Byers <lobsterkatie@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.41.6",
+    "webpack-cli": "^4.0.0-beta.2"
+  },
+  "scripts":{"build": "webpack"}
 }
