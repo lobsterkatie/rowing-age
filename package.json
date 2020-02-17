@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Sandbox for npm experimentation [Utilities for calculating age-based rowing data]",
   "main": "dist/index.js",
+  "module": "src/index.js",
   "repository": "https://github.com/lobsterkatie/rowing-age.git",
   "author": "Katie Byers <lobsterkatie@gmail.com>",
   "license": "MIT",
