@@ -1,7 +1,7 @@
 {
-  "name": "rowing-age",
+  "name": "@lobsterkatie/rowing-age",
   "version": "1.0.0",
-  "description": "Utilities for calculating age-based rowing data",
+  "description": "Sandbox for npm experimentation [Utilities for calculating age-based rowing data]",
   "main": "dist/index.js",
   "repository": "https://github.com/lobsterkatie/rowing-age.git",
   "author": "Katie Byers <lobsterkatie@gmail.com>",
