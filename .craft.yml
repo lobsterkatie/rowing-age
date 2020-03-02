@@ -1,0 +1,59 @@
+# GH repo for the project
+github:
+  owner: lobsterkatie
+  repo: rowing-age
+
+# script to run on release branch as part of `craft prepare`
+# preReleaseCommand: bash scripts/bump-version.sh # default
+
+# path to the changelog file
+# changelog: CHANGELOG.md # default
+
+# should craft remind you to add a changelog entry? (simple = yes, none = no)
+# changelogPolicy: simple # default is none
+
+# earliest version of craft which will run with this config
+minVersion: "0.9.1"
+
+# files which must be present for publishing to be successful - `craft publish`
+# will error out if any are missing
+# requireNames:
+#     - /^sentry-craft.*\.tgz$/ #example
+#     - /^gh-pages.zip$/ #example
+
+# destinations for publishing
+targets:
+    # - name: github
+
+      # files to include/exclude when processing this target
+    #   includeNames: /^.*\.exe$/ # example
+    #   excludeNames: /^test.exe$/ # example
+
+      # for the release tag on GH
+    #   tagPrefix: v # default is ''
+
+      # detect/create preview releases
+    #   previewReleases: true # default
+
+      # whether to have the release tag be lightweight or annotated
+    #   annotatedTag: true # default
+
+  # - name: npm
+
+  #   # whether the npm package is 'public' or 'restricted' (private)
+  #   access: public # default
+
+#   - name: pypi
+#     # no config options available
+
+   - name: gcs
+    bucket: craft-test-artifacts
+    paths:
+      - path: testing
+    includeNames: testdoc.txt
+
+  # there are other targets - see craft README
+
+  # what source to check for travis, appveyor, etc results - zeus or github
+  statusProvider:
+    name: github
