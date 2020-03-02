@@ -46,7 +46,7 @@ targets:
 #   - name: pypi
 #     # no config options available
 
-   - name: gcs
+  - name: gcs
     bucket: craft-test-artifacts
     paths:
       - path: testing
