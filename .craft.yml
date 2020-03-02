@@ -21,39 +21,38 @@ minVersion: "0.9.1"
 #     - /^sentry-craft.*\.tgz$/ #example
 #     - /^gh-pages.zip$/ #example
 
+# what source to check for travis, appveyor, etc results - zeus or github
+statusProvider:
+  name: github
+
 # destinations for publishing
 targets:
-    # - name: github
+  # - name: github
 
-      # files to include/exclude when processing this target
-    #   includeNames: /^.*\.exe$/ # example
-    #   excludeNames: /^test.exe$/ # example
+  # files to include/exclude when processing this target
+  #   includeNames: /^.*\.exe$/ # example
+  #   excludeNames: /^test.exe$/ # example
 
-      # for the release tag on GH
-    #   tagPrefix: v # default is ''
+  # for the release tag on GH
+  #   tagPrefix: v # default is ''
 
-      # detect/create preview releases
-    #   previewReleases: true # default
+  # detect/create preview releases
+  #   previewReleases: true # default
 
-      # whether to have the release tag be lightweight or annotated
-    #   annotatedTag: true # default
+  # whether to have the release tag be lightweight or annotated
+  #   annotatedTag: true # default
 
   # - name: npm
 
   #   # whether the npm package is 'public' or 'restricted' (private)
   #   access: public # default
 
-#   - name: pypi
-#     # no config options available
+  #   - name: pypi
+  #     # no config options available
 
   - name: gcs
     bucket: craft-test-artifacts
     paths:
       - path: testing
     includeNames: testdoc.txt
-
   # there are other targets - see craft README
-
-  # what source to check for travis, appveyor, etc results - zeus or github
-  statusProvider:
-    name: github
