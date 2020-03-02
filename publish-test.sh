@@ -4,7 +4,7 @@ gsutil ls gs://craft-test-artifacts
 echo
 
 echo "RUNNING CRAFT PUBLISH"
-craft publish $1
+craft publish --no-status-check $1
 
 echo
 echo "NEW CONTENTS OF BUCKET"
