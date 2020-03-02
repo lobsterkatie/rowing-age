@@ -54,5 +54,5 @@ targets:
     bucket: craft-test-artifacts
     paths:
       - path: testing/{{version}}/
-    includeNames: testdoc.txt
+    includeNames: /testdoc.txt/
   # there are other targets - see craft README
