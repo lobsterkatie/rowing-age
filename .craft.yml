@@ -53,6 +53,6 @@ targets:
   - name: gcs
     bucket: craft-test-artifacts
     paths:
-      - path: testing
+      - path: testing/{{version}}/
     includeNames: testdoc.txt
   # there are other targets - see craft README

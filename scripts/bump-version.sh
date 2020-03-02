@@ -15,10 +15,11 @@
 # # bump the version in package.json and package-lock.json
 # npm version "${NEW_VERSION}"
 
-echo "VERSION BUMP WOULD HAPPEN HERE"
+# echo "VERSION BUMP WOULD HAPPEN HERE"
 NOW=$(date +"%r")
+echo -e "\n$2" >>testdoc.txt
 echo $NOW >>testdoc.txt
 echo
-echo "CURRENT CONTENTS OF BUCKET"
-gsutil ls gs://craft-test-artifacts
-echo
+# echo "CURRENT CONTENTS OF BUCKET"
+# gsutil ls gs://craft-test-artifacts
+# echo
