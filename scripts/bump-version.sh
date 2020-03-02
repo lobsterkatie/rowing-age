@@ -17,7 +17,7 @@
 
 # echo "VERSION BUMP WOULD HAPPEN HERE"
 NOW=$(date +"%r")
-echo -e "\n$2" >>testdoc.txt
+echo -e "\n$2 - craft prepare" >>testdoc.txt
 echo $NOW >>testdoc.txt
 echo
 # echo "CURRENT CONTENTS OF BUCKET"

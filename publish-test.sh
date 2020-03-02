@@ -1,3 +1,5 @@
+source ignored/gcs-creds.sh
+
 echo
 echo "CURRENT CONTENTS OF BUCKET"
 gsutil ls gs://craft-test-artifacts
