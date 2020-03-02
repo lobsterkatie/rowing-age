@@ -16,6 +16,8 @@
 # npm version "${NEW_VERSION}"
 
 echo "VERSION BUMP WOULD HAPPEN HERE"
+NOW=$(date +"%r")
+echo $NOW >>testdoc.txt
 echo
 echo "CURRENT CONTENTS OF BUCKET"
 gsutil ls gs://craft-test-artifacts
