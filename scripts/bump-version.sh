@@ -15,7 +15,7 @@
 # # bump the version in package.json and package-lock.json
 # npm version "${NEW_VERSION}"
 
-# echo "VERSION BUMP WOULD HAPPEN HERE"
+echo "VERSION BUMP WOULD HAPPEN HERE"
 NOW=$(date +"%r")
 echo -e "\n$2 - craft prepare" >>testdoc.txt
 echo $NOW >>testdoc.txt
