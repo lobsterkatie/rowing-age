@@ -21,17 +21,8 @@ echo -e "\n$2 - craft prepare" >>testdoc.txt
 echo $NOW >>testdoc.txt
 echo
 
-echo "UPLOADING STUFF TO ZEUS"
-source ignored/zeus-creds.sh
-
 SHA=$(git rev-parse HEAD)
-# BUILD=$(git log --oneline | wc -l)
-export BUILD=$(($BUILD + 1))
 echo "git SHA of release branch head is $SHA"
-echo "build number is $BUILD"
-
-zeus job update --build $BUILD --job 1 --ref $SHA
-zeus upload --build $BUILD --job 1 testdoc.txt
 
 # echo "CURRENT CONTENTS OF BUCKET"
 # gsutil ls gs://craft-test-artifacts
