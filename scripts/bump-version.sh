@@ -21,9 +21,6 @@ echo -e "\n$2 - craft prepare" >>testdoc.txt
 echo $NOW >>testdoc.txt
 echo
 
-SHA=$(git rev-parse HEAD)
-echo "git SHA of release branch head is $SHA"
-
 # echo "CURRENT CONTENTS OF BUCKET"
 # gsutil ls gs://craft-test-artifacts
 # echo
