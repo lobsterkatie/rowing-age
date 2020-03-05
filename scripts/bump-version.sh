@@ -25,7 +25,8 @@ echo "UPLOADING STUFF TO ZEUS"
 source ignored/zeus-creds.sh
 
 SHA=$(git rev-parse HEAD)
-BUILD=$(git log --oneline | wc -l)
+# BUILD=$(git log --oneline | wc -l)
+export BUILD=$(($BUILD + 1))
 echo "git SHA of release branch head is $SHA"
 echo "build number is $BUILD"
 
