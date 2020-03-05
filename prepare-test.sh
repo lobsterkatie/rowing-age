@@ -25,5 +25,5 @@ BUILD=$(git log --oneline | wc -l | sed -E 's/[ ]*(.*)/\1/')
 echo "git SHA is $SHA"
 echo "build number is $BUILD"
 
-zeus job update --build $BUILD --job 1 --ref $SHA
-zeus upload --build $BUILD --job 1 testdoc.txt
+zeus job update --build=$BUILD --job=1 --ref=$SHA
+zeus upload --build=$BUILD --job=1 testdoc.txt
