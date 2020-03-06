@@ -8,7 +8,7 @@ echo
 
 echo "RUNNING CRAFT PUBLISH"
 export CRAFT_LOG_LEVEL=debug
-# SHA=$(git rev-parse release/1.0.1)
+## SHA=$(git rev-parse release/1.0.1)
 SHA=$(git rev-parse HEAD)
 
 # craft publish --no-status-check $1
