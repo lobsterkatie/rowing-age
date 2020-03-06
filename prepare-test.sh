@@ -7,4 +7,4 @@ export CRAFT_LOG_LEVEL=debug
 craft prepare 1.0.1
 
 echo "CALLING ZEUS UPLOAD SCRIPT"
-source zeus_upload.sh
+source zeus-upload.sh
