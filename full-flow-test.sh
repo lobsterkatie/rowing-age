@@ -21,7 +21,7 @@ echo -e "\nbuild number is $BUILD"
 zeus job update --build=$BUILD --job=1 --ref=$SHA
 
 echo -e "\nTAKING A BRIEF NAP"
-sleep 30
+sleep 15
 
 echo -e "\nMAKING SECOND ZEUS JOB"
 # SHA=$(git rev-parse HEAD)
