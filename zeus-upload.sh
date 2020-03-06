@@ -8,4 +8,5 @@ echo "git SHA is $SHA"
 echo "build number is $BUILD"
 
 zeus job update --build=$BUILD --job=1 --ref=$SHA
+sleep 60
 zeus upload --build=$BUILD --job=1 testdoc.txt
