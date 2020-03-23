@@ -25,34 +25,36 @@ minVersion: "0.9.1"
 statusProvider:
   name: github
 
-# destinations for publishing
-targets:
-  # - name: github
+artifactProvider:
+  name: none
+# # destinations for publishing
+# targets:
+#   # - name: github
 
-  # files to include/exclude when processing this target
-  #   includeNames: /^.*\.exe$/ # example
-  #   excludeNames: /^test.exe$/ # example
+#   # files to include/exclude when processing this target
+#   #   includeNames: /^.*\.exe$/ # example
+#   #   excludeNames: /^test.exe$/ # example
 
-  # for the release tag on GH
-  #   tagPrefix: v # default is ''
+#   # for the release tag on GH
+#   #   tagPrefix: v # default is ''
 
-  # detect/create preview releases
-  #   previewReleases: true # default
+#   # detect/create preview releases
+#   #   previewReleases: true # default
 
-  # whether to have the release tag be lightweight or annotated
-  #   annotatedTag: true # default
+#   # whether to have the release tag be lightweight or annotated
+#   #   annotatedTag: true # default
 
-  # - name: npm
+#   # - name: npm
 
-  #   # whether the npm package is 'public' or 'restricted' (private)
-  #   access: public # default
+#   #   # whether the npm package is 'public' or 'restricted' (private)
+#   #   access: public # default
 
-  #   - name: pypi
-  #     # no config options available
+#   #   - name: pypi
+#   #     # no config options available
 
-  - name: gcs
-    bucket: craft-test-artifacts
-    paths:
-      - path: "{{version}}/"
-    includeNames: /testdoc.txt/
-  # there are other targets - see craft README
+#   - name: gcs
+#     bucket: craft-test-artifacts
+#     paths:
+#       - path: "{{version}}/"
+#     includeNames: /testdoc.txt/
+#   # there are other targets - see craft README
