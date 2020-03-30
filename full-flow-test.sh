@@ -31,21 +31,21 @@ echo -e "\nbuild number is $BUILD"
 zeus job update --build=$BUILD --job=1 --ref=$SHA
 
 echo -e "\nUPLOADING STUFF TO ZEUS"
-zeus upload --build=$BUILD --job=1 testdoc.txt
+zeus upload --build=$BUILD --job=1 test-dir/**
 
-source ignored/gcs-creds.sh
-unset ZEUS_TOKEN
+# source ignored/gcs-creds.sh
+# unset ZEUS_TOKEN
 
-echo -e "\nEMPTYING BUCKET"
-gsutil rm -r gs://craft-test-artifacts/1.0.1/*
-echo -e "\nCURRENT CONTENTS OF BUCKET"
-gsutil ls gs://craft-test-artifacts/1.0.1
+# echo -e "\nEMPTYING BUCKET"
+# gsutil rm -r gs://craft-test-artifacts/1.0.1/*
+# echo -e "\nCURRENT CONTENTS OF BUCKET"
+# gsutil ls gs://craft-test-artifacts/1.0.1
 
-echo -e "\nRUNNING CRAFT PUBLISH"
+# echo -e "\nRUNNING CRAFT PUBLISH"
 
-# SHA=$(git rev-parse HEAD)
+# # SHA=$(git rev-parse HEAD)
 
-node ./node_modules/\@sentry/craft/dist/index.js publish --no-status-check --no-input 1.0.1 --rev $SHA
+# node ./node_modules/\@sentry/craft/dist/index.js publish --no-status-check --no-input 1.0.1 --rev $SHA
 
-echo -e "\nNEW CONTENTS OF BUCKET"
-gsutil ls gs://craft-test-artifacts/1.0.1
+# echo -e "\nNEW CONTENTS OF BUCKET"
+# gsutil ls gs://craft-test-artifacts/1.0.1
