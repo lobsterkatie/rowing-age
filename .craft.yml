@@ -27,7 +27,8 @@ statusProvider:
 
 artifactProvider:
   name: gcs
-  bucket: craft-test-artifacts
+  config:
+    bucket: craft-test-artifacts
 
 # destinations for publishing
 targets:
